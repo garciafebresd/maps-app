@@ -13,16 +13,23 @@ import { AgmCoreModule } from '@agm/core';
 
 //Components
 import { MapComponent } from './components/map/map.component';
+import { MapEditComponent } from './components/map/map-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
+  entryComponents: [
+    MapEditComponent
+  ],
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    MapEditComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     MaterialModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDQlFeB5COihzKnFCTEUKsOGILbdhheH5A'
